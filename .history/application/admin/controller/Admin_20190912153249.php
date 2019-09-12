@@ -22,7 +22,6 @@ class Admin extends Controller
 
             $data['status'] = 1;
             
-            
             // 1 excpotion 
             // 2 add id
             try{
@@ -32,9 +31,7 @@ class Admin extends Controller
             }
 
             if($id){
-                $this->success('id='.$id.'的用户数据新增成功');
-            }else{
-                $this->error('error');
+                $this->success()；
             }
 
         }else{

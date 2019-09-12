@@ -22,7 +22,6 @@ class Admin extends Controller
 
             $data['status'] = 1;
             
-            
             // 1 excpotion 
             // 2 add id
             try{

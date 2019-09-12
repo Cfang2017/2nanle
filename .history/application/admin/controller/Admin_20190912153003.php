@@ -22,19 +22,11 @@ class Admin extends Controller
 
             $data['status'] = 1;
             
-            
-            // 1 excpotion 
-            // 2 add id
+
             try{
-                $id = model('AdminUser')->add($data);
+                model('AdminUser')->add($data);
             }catch(\Exception $e){
                 $this->error( $e->getMessage());
-            }
-
-            if($id){
-                $this->success('id='.$id.'的用户数据新增成功');
-            }else{
-                $this->error('error');
             }
 
         }else{

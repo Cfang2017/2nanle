@@ -22,7 +22,7 @@ class Admin extends Controller
 
             $data['status'] = 1;
             
-            
+            echo is_array($data);
             // 1 excpotion 
             // 2 add id
             try{

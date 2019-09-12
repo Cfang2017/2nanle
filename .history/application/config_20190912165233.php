@@ -241,7 +241,7 @@ return [
         'list_rows' => 15,
     ],
     'captcha' => [
-        'imageH' => 50,
-        'imageW' => 200
+        'imageH' => 40,
+        'imageW' => 120
     ]
 ];
