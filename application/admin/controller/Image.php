@@ -3,13 +3,13 @@ namespace app\admin\controller;
 
 use think\Controller;
 use think\Request;
-
+use app\common\lib\Upload;
 /**
  *后台图片上传相关逻辑
  */
 class Image  extends Base
 {
-  public function upload()
+  public function upload0()
   {
 
     $file = Request::instance()->file('file');
@@ -34,4 +34,20 @@ class Image  extends Base
     //  ];
     //  echo json_encode($data);exit;
   }
+
+  public function upload(){
+    $image = Upload::image();
+    if($image){
+      $data = [
+        'status' => 1,
+        'message' => 'Ok',
+        'data' => config('qiniu')['image_url'].'/'.$image
+      ];
+    }else {
+      $data = ['status' => 0,'message'=>'上传失败'];
+    }
+    echo json_encode($data);
+    exit;
+  }
+  
 }
