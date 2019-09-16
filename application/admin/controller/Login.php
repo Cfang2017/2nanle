@@ -26,7 +26,7 @@ class Login  extends Controller
           $this->error($e -> getMessage());
         }
         if(!$user || $user->status != 1){
-          $this->eroor('该用户不存在');
+          $this->error('该用户不存在');
         }
 
 

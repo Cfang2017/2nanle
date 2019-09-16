@@ -3,15 +3,14 @@ namespace app\admin\controller;
 
 use think\Controller;
 
-class Index  extends Base
+class News extends Base
 {
-  public function index()
+  public function add()
   {
     return $this->fetch();
   }
 
-  public function welcome()
-  {
-    echo "123";
+  public function index(){
+    return $this->fetch();
   }
 }
